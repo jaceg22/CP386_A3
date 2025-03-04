@@ -36,7 +36,7 @@ void* throw_darts(void* arg) {
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
-        fprintf(stderr, "Usage: %s <NUMBER_OF_DARTS> <NUMBER_OF_THREADS>\n", argv[0]);
+        fprintf(stderr, "usage: pi <NUMBER_OF_DARTS> <NUMBER_OF_THREADS>\n");
         return 1;
     }
 
