@@ -1,3 +1,11 @@
+/*
+-----------------------
+CP386 A3 Q1
+pi.c
+gand5517@mylaurier.ca
+169025517
+-----------------------
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
