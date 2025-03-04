@@ -50,6 +50,6 @@ int main(int argc, char* argv[]){
     }
     pthread_mutex_destroy(&lock);
     double pi=4.0*circle_points/totalDarts;
-    printf("Pi=%f\n", pi);
+    printf("Pi = %f\n", pi);
     return 0;
 }
