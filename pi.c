@@ -36,16 +36,20 @@ void* throw_darts(void* arg) {
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
-        printf("Usage: %s <NUMBER_OF_DARTS> <NUMBER_OF_THREADS>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <NUMBER_OF_DARTS> <NUMBER_OF_THREADS>\n", argv[0]);
         return 1;
     }
 
     total_darts = atol(argv[1]);
     int num_threads = atoi(argv[2]);
 
-    if (total_darts < 5000000 || num_threads < 2) {
-        printf("The number of darts must be >= 5000000\n");
-        printf("The number of threads must be >= 2\n");
+    if (total_darts < 5000000) {
+        fprintf(stderr, "The number of darts must be >= 5000000\n");
+        return 1;
+    }
+
+    if (num_threads < 2) {
+        fprintf(stderr, "The number of threads must be >= 2\n");
         return 1;
     }
 
